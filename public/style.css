@@ -1,0 +1,80 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    font: 1rem 'Fira Sans', sans-serif;
+}
+body > div{
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+}
+body > div > div{
+    margin: 1.5em;
+}
+h3{
+    margin-top: 1em;
+    margin-bottom: 0.2em;
+    font-weight: 550;
+}
+
+#levels{
+    min-width: 11em;
+}
+
+#levels > p {display: inline}
+
+#levels > input[type="number"]{
+    padding: 0.1em;
+    width: 30px;
+    display: inline;
+    border-radius: 0;
+    border: 1.6px solid grey;
+    text-align: center;
+}
+#levels > input[type="color"]{}
+
+#background_box{
+    margin-bottom: 3em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 15em;
+    background:#ebebeb;
+}
+
+#box{
+    display: flex;
+    justify-content: center;
+    background: #777777;
+    width: 20em;
+    height: 7em;
+    border-radius: 8px;
+    box-shadow: 41px -2px 43px 0px rgba(0,0,0,0.42);
+    -moz-box-shadow: 41px -2px 43px 0px rgba(0,0,0,0.42);
+    -webkit-box-shadow: 41px -2px 43px 0px rgba(0,0,0,0.42);
+}
+#code{
+    padding: 1.5em 1.5em;
+    min-width: 26em;
+    background: rgb(59, 59, 59);
+    border-radius: 10px;
+    color: rgb(4, 110, 160);
+}
+
+/*EXTRACTED CODE*/
+
+/* Hide input number arrows for Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Hide input number arrows for Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
