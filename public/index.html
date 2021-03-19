@@ -14,56 +14,121 @@
 <body>
 
   <div>
+    <div class="a">
+    <h1>Settings</h1>
     <div id="levels">
-      <h3>Horizontal-offset</h3>
-      <input type="range" min="-180" max="180" value="41"/>
-      <p>Value:</p>
-      <input type="number"  min="-180" max="180" value="41"/>
-
-      <h3>Vertical-offset</h3>
-      <input type="range" min="-180" max="180" value="-1"/>
-      <p>Value:</p>
-      <input type="number"  min="-180" max="180" value="-1"/>
-
-      <h3>Blur</h3>
-      <input type="range" min="-180" max="180" value="43"/>
-      <p>Value:</p>
-      <input type="number"  min="-180" max="180" value="43"/>
-
-      <h3>Spread</h3>
-      <input type="range" min="-180" max="180" value="0"/>
-      <p>Value:</p>
-      <input type="number"  min="-180" max="180" value="0"/>
-
-      <h3>Opacity</h3>
-      <input type="range" min="0" max="1" step="0.01">
-      <p>Value:</p>
-      <input type="number"  min="0" max="1" step="0.01">
-
-      <h3>Shadow Color</h3>
-      <input type="color" value="">
-      <h3>Box Color</h3>
-      <input type="color" value="#777777">
-      <h3>Background Color</h3>
-      <input type="color" value="#ebebeb">
-      
-    </div>
-
-    <div>
-      <div id="background_box">
-        <div id="box">
-
+      <div>
+        <picture aria-hidden="true">
+          <title>A phone icon</title>
+          <svg viewBox="0 0 24 24">
+            <path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"></path>
+          </svg>
+        </picture>
+        <div>
+          <div>
+            <p>Horizontal-offset</p>
+            <span><input type="number"  min="-180" max="180" value="41"/>px</span>
+          </div>
+          <input type="range" min="-180" max="180" value="41"/>
         </div>
       </div>
 
-      <h2>Code</h2>
+      <div>
+        <picture aria-hidden="true">
+          <title>A phone icon</title>
+          <svg viewBox="0 0 24 24">
+            <path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"></path>
+          </svg>
+        </picture>
+        <div>
+          <div>
+            <p>Vertical-offset</p>
+            <span><input type="number"  min="-180" max="180" value="41"/>px</span>
+          </div>
+
+          <input type="range" min="-180" max="180" value="41"/>
+        </div>
+      </div>
+      
+      <div>
+        <picture aria-hidden="true">
+          <title>A phone icon</title>
+          <svg viewBox="0 0 24 24">
+            <path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"></path>
+          </svg>
+        </picture>
+        <div>
+          <div>
+            <p>Blur</p>
+            <span><input type="number"  min="-180" max="180" value="41"/>px</span>
+          </div>
+
+          <input type="range" min="-180" max="180" value="41"/>
+        </div>
+      </div>
+
+      <div>
+        <picture aria-hidden="true">
+          <title>A phone icon</title>
+          <svg viewBox="0 0 24 24">
+            <path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"></path>
+          </svg>
+        </picture>
+        <div>
+          <div>
+            <p>Spread</p>
+            <span><input type="number"  min="-180" max="180" value="0"/>px</span>
+          </div>
+
+          <input type="range" min="-180" max="180" value="0"/>
+        </div>
+      </div>
+      
+      <div>
+        <picture aria-hidden="true">
+          <title>A phone icon</title>
+          <svg viewBox="0 0 24 24">
+            <path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"></path>
+          </svg>
+        </picture>
+        <div>
+          <div>
+            <p>Opacity</p>
+            <span><input type="number"  min="0" max="1" step="0.01" value="1">px</span>
+          </div>
+
+          <input type="range" min="0" max="1" step="0.01" value="1">
+        </div>
+      </div>
+    </div>
+    </div>
+
+    <div class="b">
+    <h1>Output</h1>
+    <div id="output">
+      <div id="background_box">
+        <div id="box">
+        </div>
+      </div>
+      <div>
+        <input type="color" value="black" name="shadow">
+        <input type="color" value="#777777" name="box">
+        <input type="color" value="#ebebeb" name="background">
+      </div>
+    </div>
+    </div>
+
+     
+    <div class="c">
+      <h1>Code</h1>
       <div id="code">
         <p>box-shadow: 41px -2px 43px 0px rgba(0,0,0,0.42);</p>
         <p>-moz-box-shadow: 41px -2px 43px 0px rgba(0,0,0,0.42);</p>
         <p>-webkit-box-shadow: 41px -2px 43px 0px rgba(0,0,0,0.42);</p>
       </div>
     </div>
-    <iframe src="./iframe.html" scrolling="no" height="620" width="710" frameborder="0" marginheight="0" marginwidth="0"></iframe>
+    
+
 
   </div>
   

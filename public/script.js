@@ -6,7 +6,10 @@ const code = document.querySelector("#code")
 
 //selectors
 //color + horizontal + vertical + blur + spread
-box.style.boxShadow = 'rgba(0,0,0,0.42) 41px -2px 43px 0px'
+box.style.boxShadow = 'rgba(0,0,0,0.42) 41px -2px 43px 0px';
+box.style.background = '#777777;'
+background_box.style.background = 'rgb(59, 59, 59)';
+
 document.querySelector("#levels").querySelectorAll('input').forEach(input => input.addEventListener('change', e => InputChange(e)))
 
 
@@ -15,7 +18,12 @@ function InputChange(e){
     let mainInput = e.target.previousElementSibling.tag === "p" ? e.target.previousElementSibling.previousElementSibling : e.target
     let index = values.indexOf(mainInput.previousElementSibling.innerHTML)
     
-    if(values[index] === "Opacity") ChangeOpacityProperty();
+    if(mainInput.type === "color"){
+        switch(mainInput.name){
+            case "shadow": //continue this
+        }
+    }
+    else if(values[index] === "Opacity") ChangeOpacityProperty();
     else if(!values[index].includes("Color")){
         //non color input
         ChangeShadowProperty(index, mainInput)
