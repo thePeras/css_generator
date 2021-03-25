@@ -1,4 +1,4 @@
-//consts
+//Consts
 const values = ["Shadow Color", "Horizontal-offset","Vertical-offset","Blur","Spread","Opacity"]
 const box = document.querySelector('#box');
 const background_box = document.querySelector('#background_box')
@@ -6,20 +6,21 @@ const code = document.querySelector("#code")
 const colors = document.querySelector("#colors").children
 const scripts = document.querySelectorAll(".script")
 
-//initial
-
-
-box.style.boxShadow = 'rgba(0,0,0,0.42) 41px -2px 43px 0px';
-box.style.background = '#777777'
-background_box.style.background = 'rgb(59, 59, 59)';
-colors[0].value = "#000000"
-colors[1].value = "#777777"
-colors[2].value = "#3b3b3b"
-ChangeCode("rgba(0,0,0,0.42) 41px -2px 43px 0px")
+//Initial
+let initial_code = window.localStorage.getItem('code') || 'rgba(0,0,0,0.42) 41px -2px 43px 0px'
+let colors_cache = window.localStorage.getItem('colors') ? window.localStorage.getItem('colors').split(",") : ["#000000", "#777777", "#3b3b3b"] //depends of style
+console.log(colors_cache)
+box.style.boxShadow = initial_code;
+box.style.background = colors_cache[1]
+background_box.style.background = colors_cache[2];
+colors[0].value = colors_cache[0]
+colors[1].value = colors_cache[1]
+colors[2].value = colors_cache[2]
+//set levels propertys
+ChangeCode(initial_code)
 
 document.querySelector("#levels").querySelectorAll('input').forEach(input => input.addEventListener('input', e => InputChange(e)))
 document.querySelector("#colors").querySelectorAll('input').forEach(input => input.addEventListener('input', e => ChangeColor(e)))
-
 
 function InputChange(e){
     //select type
@@ -65,18 +66,26 @@ function ChangeColor(e){
             console.log(old_style[0])
             let new_style = old_style.join(" ")
             box.style.boxShadow = new_style
-            
+            ChangeCode(new_style)
+
+            colors_cache[0] = e.target.value;
+            window.localStorage.setItem('colors',colors_cache)
             break;
         case "box":
             box.style.background = e.target.value
+            colors_cache[1] = e.target.value;
+
+            window.localStorage.setItem('colors', colors_cache)
             break;
-        case "background": background_box.style.background = e.target.value;
+        case "background": 
+            background_box.style.background = e.target.value;
+            colors_cache[2] = e.target.value;
+            window.localStorage.setItem('colors', colors_cache)
+            break;
     }
 }
 
 function ChangeCode(new_style){
     scripts.forEach(script => script.innerHTML = new_style)
-}
-function SaveToChache(new_style){
-    localStorage.setItem("code", new_style)
+    window.localStorage.setItem("code", new_style)
 }
